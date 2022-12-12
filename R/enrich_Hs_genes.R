@@ -12,6 +12,7 @@
 #'
 #' @import clusterProfiler
 #' @import org.Hs.eg.db
+#'
 #' @return enrichResult class
 #' @export
 #'
