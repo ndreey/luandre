@@ -3,7 +3,7 @@ Type: Package
 Title: Differential gene expression analysis using edgeR
 Version: 0.1.0
 Author: André Bourbonnais, Luan Gardenalli
-Maintainer: André Bourbonnais <andbou95@gmail.com>
+Maintainer: André Bourbonnais <andbou95@gmail.com>, 
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT License
