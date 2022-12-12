@@ -18,6 +18,7 @@
 #' @import enrichplot
 #' @import GOSemSim
 #' @import ggplot2
+#' @import ggupset
 #'
 #' @return null
 #' @export

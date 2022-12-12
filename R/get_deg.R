@@ -23,5 +23,5 @@ get_deg <- function(deg_results, lfc = 1, adj_p = 0.05) {
   deg_genes <- subset(deg_table$table, FDR < adj_p & abs(logFC) > lfc)
 
   # Return the filtered table
-  deg_genes
+  return(deg_genes)
 }
