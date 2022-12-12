@@ -20,4 +20,5 @@ Imports:
     org.Hs.eg.db,
     ggplot2,
     enrichplot,
-    GOSemSim
+    GOSemSim,
+    ggupset

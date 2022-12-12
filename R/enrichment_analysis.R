@@ -1,5 +1,5 @@
 enrich_analysis <- function(counts_file, sample_table_file, db, ontology = NULL){
-  fetch_data_from_file("E-MTAB-2523.counts.txt", "E-MTAB-2523_sample table.txt")
+  fetch_data_from_file(counts_file, sample_table_file)
   digital_gene_expression(count_data, sample_table)
   deg <- fit_test_model(dge_list, design_matrix)
   filtered_degs <- get_deg(deg)
