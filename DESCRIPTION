@@ -16,4 +16,5 @@ Config/testthat/edition: 3
 Imports: 
     edgeR,
     limma,
-    clusterProfiler
+    clusterProfiler,
+    org.Hs.eg.db

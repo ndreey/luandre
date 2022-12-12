@@ -11,6 +11,7 @@
 #' @param ontology "BP", "CC" or "MF"
 #'
 #' @import clusterProfiler
+#' @import org.Hs.eg.db
 #' @return enrichResult class
 #' @export
 #'
@@ -19,7 +20,7 @@ enrich_Hs_genes <- function(entrez, db, ontology = NULL) {
   if (db == "GO") {
     # Enrichment GO
     rich_res <- clusterProfiler::enrichGO(gene          = entrez,
-                                          OrgDb         = org.Hs.eg.db,
+                                      OrgDb         = org.Hs.eg.db::org.Hs.eg.db,
                                           ont           = ontology,
                                           pAdjustMethod = "BH",
                                           pvalueCutoff  = 0.05)
