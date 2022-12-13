@@ -12,7 +12,6 @@ digital_gene_expression <- function(count_data, sample_table) {
   # Keeps the genes that at least have two samples with cpm > 100 by indexing.
   # keep <- rowSums(cpm(count_data>100) >= 2  # index of TRUE or FALSE
   # counts <- count_data[keep,]
-  #
   # This will give us 3834 possible DEGs instead of 13888.
   #-----------------------------------------------------------------------------
   #Filters count data:
@@ -22,7 +21,7 @@ digital_gene_expression <- function(count_data, sample_table) {
 
 
   #-----------------------------------------------------------------------------
-  # CHECK LINE 31
+  # CHECK LINE 52
   # Missed setting levels = c('normal', 'carcinoma') in factorizing.Important
   # that we have control as 0 (base line) so we can see how much
   # disease diverges.
@@ -33,7 +32,7 @@ digital_gene_expression <- function(count_data, sample_table) {
 
 
   #-----------------------------------------------------------------------------
-  # CHECK LINE 42
+  # CHECK LINE 62
   # I believe you meant to do colnames(levels(control_factor)) to set colnames
   # to carcinoma and normal.
   # ----------------------------------------------------------------------------
@@ -43,7 +42,7 @@ digital_gene_expression <- function(count_data, sample_table) {
 
 
   #-----------------------------------------------------------------------------
-  # CHECK LINE 50
+  # CHECK LINE 71
   # Because group = control_factor was not added, dge$samples only consists of
   # 1's. When we add the grouping we also get groups into this DGEList object.
   #-----------------------------------------------------------------------------
