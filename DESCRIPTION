@@ -21,4 +21,5 @@ Imports:
     ggplot2,
     enrichplot,
     GOSemSim,
-    ggupset
+    ggupset,
+    openxlsx

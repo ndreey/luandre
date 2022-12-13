@@ -6,7 +6,7 @@
 #' @param deg_df data.frame with differently expressed genes
 #' @param filename string naming the excel file. (.xlsx is added automatically)
 #'
-#' @import opensxlsx
+#' @import openxlsx
 #'
 #' @return filename.xlsx
 #' @export
