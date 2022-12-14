@@ -20,17 +20,14 @@
 #' @import ggplot2
 #' @import ggupset
 #'
+#' @importFrom graphics barplot
+#'
 #' @return null
 #' @export
 #'
 enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
 
-  # Idea------------------------------------------------------------------------
-  # Would be real cool if we could split plot so you have control vs case.
-  # But we can do that in later versions.Lets just get basic plotting working.
-
-
-  # Store the ontology of enrichRes object
+    # Store the ontology of enrichRes object
   type <- toupper(rich_res@ontology)
 
   # Define a string with placeholders for multiple values
@@ -56,10 +53,8 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
   }
 
   # Draw plots------------------------------------------------------------------
-  #
-
   # Dotplot
-  dot <- enrichplot::dotplot(rich_res, showCategory = n, title = plot_title,
+  dot <- dotplot(rich_res, showCategory = n, title = plot_title,
                              font.size = font_size)
 
   # Barplot
@@ -67,15 +62,15 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
                              font.size = font_size)
 
   # Network plot
-  cnet <- enrichplot::cnetplot(rich_res, colorEdge = TRUE) +
+  cnet <- cnetplot(rich_res, colorEdge = TRUE) +
     ggtitle(ggtitle("Gene-Concept Network", subtitle = plot_title))
 
   # Not 100% sure what this is...
-  upset <- enrichplot::upsetplot(rich_res) +
+  upset <- upsetplot(rich_res) +
     ggtitle(ggtitle("Upset plot", subtitle = plot_title))
 
   # Like CNET but we get arrows!
-  goplot <- enrichplot::goplot(rich_res) +
+  goplot <- goplot(rich_res) +
     ggtitle(ggtitle("GOplot", subtitle = plot_title))
 
 
@@ -84,16 +79,15 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
                 list("upset", upset))
 
   # Treeplot--------------------------------------------------------------------
-  #
 
   # Creates GOSemSimDATA
   if (type != "KEGG"){
-
-    semsim <- GOSemSim::godata("org.Hs.eg.db", ont = type)
-    sim_mat <- enrichplot::pairwise_termsim(rich_res, semData = semsim)
+    # Fetches the GO data
+    semsim <- godata("org.Hs.eg.db", ont = type)
+    sim_mat <- pairwise_termsim(rich_res, semData = semsim)
 
     # Plots treeplot
-    tree <- enrichplot::treeplot(sim_mat, showCategory = n) +
+    tree <- treeplot(sim_mat, showCategory = n) +
       ggtitle(ggtitle("Treeplot", subtitle = plot_title))
 
     # Adds the tree plot to list
@@ -114,7 +108,7 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
     print(file_name)
 
     # User can "pass in the dots" of width, height and dpi.
-    ggplot2::ggsave(file_name, plot[[2]], bg = "white", ...)
+    ggsave(file_name, plot[[2]], bg = "white", ...)
   }
 
 }
