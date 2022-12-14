@@ -63,7 +63,7 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
                              font.size = font_size)
 
   # Barplot
-  bar <- enrichplot::barplot(rich_res, showCategory = n, title = plot_title,
+  bar <- barplot(rich_res, showCategory = n, title = plot_title,
                              font.size = font_size)
 
   # Network plot
