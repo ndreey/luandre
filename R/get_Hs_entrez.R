@@ -7,7 +7,7 @@
 #' @param df data frame
 #' @param key keytype, default = "SYMBOL"
 #'
-#' @import AnnotationDbi
+#' @import clusterProfiler
 #' @import org.Hs.eg.db
 #'
 #' @importFrom stats na.omit
