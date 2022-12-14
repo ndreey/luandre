@@ -33,6 +33,6 @@ fetch_data_from_file <- function(counts_file, sample_table_file) {
 
 
 
-data <- fetch_data_from_file("E-MTAB-2523.counts.txt", "E-MTAB-2523_sample table.txt")
+#data <- fetch_data_from_file("E-MTAB-2523.counts.txt", "E-MTAB-2523_sample table.txt")
 
 
