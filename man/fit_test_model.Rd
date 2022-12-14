@@ -4,7 +4,7 @@
 \alias{fit_test_model}
 \title{Linear regression using generalized linear model}
 \usage{
-fit_test_model(dge_list, design_matrix)
+fit_test_model(dge)
 }
 \arguments{
 \item{dge_list}{DGEList object}

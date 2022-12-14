@@ -16,7 +16,10 @@
 #' @export
 #'
 
-fit_test_model <- function(dge_list, design_matrix) {
+fit_test_model <- function(dge) {
+
+  design_matrix <- dge[[1]]
+  dge_list <- dge[[2]]
 
   # Estimate Common, Trended and Tagwise dispersions and adds to dge_list
   dge_list <- edgeR::estimateDisp(dge_list, design_matrix)
