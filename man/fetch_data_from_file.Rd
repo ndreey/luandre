@@ -8,6 +8,7 @@ fetch_data_from_file(counts_file, sample_table_file)
 }
 \arguments{
 \item{counts_file}{file containing count data.}
+
 \item{sample_table}{file containing sample table.}
 }
 \value{

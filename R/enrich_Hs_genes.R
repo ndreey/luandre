@@ -20,19 +20,20 @@ enrich_Hs_genes <- function(entrez, db, ontology = NULL) {
 
   if (db == "GO") {
     # Enrichment GO
-    rich_res <- clusterProfiler::enrichGO(gene          = entrez,
-                                      OrgDb         = org.Hs.eg.db::org.Hs.eg.db,
-                                          ont           = ontology,
-                                          pAdjustMethod = "BH",
-                                          pvalueCutoff  = 0.05)
+    rich_res <- enrichGO(gene          = entrez,
+                         OrgDb         = org.Hs.eg.db,
+                         ont           = ontology,
+                         pAdjustMethod = "BH",
+                         pvalueCutoff  = 0.05)
 
   } else if (db == "KEGG") {
     # Enrichment KEGG
-    rich_res <- clusterProfiler::enrichKEGG(gene          = entrez,
-                                            organism      = "hsa",
-                                            keyType       = "kegg",
-                                            pAdjustMethod = "BH",
-                                            pvalueCutoff  = 0.05)
+    rich_res <- enrichKEGG(gene          = entrez,
+                           organism      = "hsa",
+                           keyType       = "kegg",
+                           pAdjustMethod = "BH",
+                           pvalueCutoff  = 0.05)
   }
+
   return(rich_res)
 }
