@@ -2,13 +2,18 @@
 % Please edit documentation in R/fetch_data_local.R
 \name{fetch_data_from_file}
 \alias{fetch_data_from_file}
-\title{Title Fetch data from file}
+\title{Fetch data from file.}
 \usage{
 fetch_data_from_file(counts_file, sample_table_file)
 }
 \arguments{
-\item{sample_table}{}
+\item{counts_file}{file containing count data.}
+\item{sample_table}{file containing sample table.}
+}
+\value{
+list with a count data-frame and a sample table data-frame.
 }
 \description{
-Title Fetch data from file
+Imports transcriptomics count data from local text files.
+Expects two files, a count data file and a sample table file.
 }
