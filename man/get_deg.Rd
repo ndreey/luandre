@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_deg.R
 \name{get_deg}
 \alias{get_deg}
-\title{Aquires the differently expressed genes (DEGs).}
+\title{Filters out differently expressed genes (DEGs).}
 \usage{
 get_deg(deg_results, lfc = 1, adj_p = 0.05)
 }
@@ -14,7 +14,7 @@ get_deg(deg_results, lfc = 1, adj_p = 0.05)
 \item{adj_p}{numeric value indicating max adjusted p value. Default 0.05}
 }
 \value{
-data.frame
+data.frame with the DEGs
 }
 \description{
 Returns a data frame with DEGS meeting the inputed log fold change and

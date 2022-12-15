@@ -19,7 +19,7 @@ enrich_plots(rich_res, n, font_size = NULL, file_id, ...)
 \item{...}{width =, height =, dpi =,}
 }
 \value{
-null
+multiple plots.png
 }
 \description{
 Each plot will be saved to a .png following this naming convention:

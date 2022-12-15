@@ -21,8 +21,10 @@ enrich_analysis(
 
 \item{ontology}{"BP", "CC" or "MF"}
 
-\item{threshold}{minimum mean-log2-CPM to keep the data during low expression filtering.}
+\item{threshold}{minimum mean-log2-CPM to keep the data during low
+expression filtering.}
 }
 \description{
-Calls upon all functions of the package to instantly perform EA and save the result plots to the users working directory.
+Calls upon all functions of the package to instantly perform EA and save the
+result plots to the users working directory.
 }

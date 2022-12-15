@@ -7,14 +7,14 @@
 get_Hs_entrez(df, key = "SYMBOL")
 }
 \arguments{
-\item{df}{data frame}
+\item{df}{data frame with SYMBOL or ENSEMBL rownames.}
 
 \item{key}{keytype, default = "SYMBOL"}
 }
 \value{
-dataframe$ENTREZID
+dataframe with appended ENTREZID column
 }
 \description{
 Will map a column with ENTREZID for each gene based on the rownames keytype
-(ENTREZID, SYMBOL, ENSEMBL) of data frame.
+(SYMBOL, ENSEMBL) of data frame. ketype is defaulted to SYMBOL.
 }
