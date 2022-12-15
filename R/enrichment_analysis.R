@@ -43,9 +43,7 @@ enrich_analysis <- function(counts_file, sample_table_file, db, ontology = NULL,
 
   # Save the filtered_degs data.frame  to excel file.
   save_deg_excel(filtered_degs, "DEGs")
-
 }
-
 
 
 
