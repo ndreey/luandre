@@ -7,7 +7,7 @@
 filter(data, threshold = 1)
 }
 \arguments{
-\item{data}{list consisting of the count data and sample table.}
+\item{data}{list consisting of count data and sample table.}
 
 \item{threshold}{minimum mean-log2-CPM to keep the data.}
 }
