@@ -19,11 +19,11 @@
 get_Hs_entrez <- function(df, key = "SYMBOL") {
 
   # Creates a new column with the ENTREZID's in deg_genes
-  df$ENTREZID <- mapIds(org.Hs.eg.db,
-                        keys       = rownames(df),
-                        column     = "ENTREZID",
-                        keytype    = key,
-                        multiVals  = "first")
+  df$ENTREZID <- org.Hs.eg.db::mapIds(org.Hs.eg.db,
+                                      keys       = rownames(df),
+                                      column     = "ENTREZID",
+                                      keytype    = key,
+                                      multiVals  = "first")
 
   # There could be N/A values.. not decided if we should omit or not. Must
   # discuss with Luan how to approach. For now i will omit the n/a values.
