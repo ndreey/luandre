@@ -8,9 +8,10 @@
 #' @param key keytype, default = "SYMBOL"
 #'
 #' @import clusterProfiler
-#' @import org.Hs.eg.db
 #'
 #' @importFrom stats na.omit
+#' @importFrom org.Hs.eg.db mapIds
+#'
 #'
 #' @return dataframe with appended ENTREZID column
 #' @export
