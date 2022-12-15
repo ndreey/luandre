@@ -25,7 +25,7 @@ devtools::install_github("ndreey/luandre")
 ```
 ## Tutorials
 
-- Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/luandre/470d7b98bc5068003c15a983fb3ece0edefcd21f/docs/index.html) for more information
+- Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/luandre/3de202b2859c2e5c5bbcfcb9079edde73a285361/docs/index.html) for more information
 
 ## Enrichment Analysis
 
