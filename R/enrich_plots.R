@@ -27,11 +27,7 @@
 #'
 enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
 
-<<<<<<< HEAD
   # Store the ontology of enrichRes object
-=======
-    # Store the ontology of enrichRes object
->>>>>>> main
   type <- toupper(rich_res@ontology)
 
   # Define a string with placeholders for multiple values
@@ -59,11 +55,7 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
   # Draw plots------------------------------------------------------------------
   # Dotplot
   dot <- dotplot(rich_res, showCategory = n, title = plot_title,
-<<<<<<< HEAD
                  font.size = font_size)
-=======
-                             font.size = font_size)
->>>>>>> main
 
   # Barplot
   bar <- barplot(rich_res, showCategory = n, title = plot_title,
@@ -77,13 +69,6 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
   upset <- upsetplot(rich_res) +
     ggtitle(ggtitle("Upset plot", subtitle = plot_title))
 
-<<<<<<< HEAD
-=======
-  # Like CNET but we get arrows!
-  goplot <- goplot(rich_res) +
-    ggtitle(ggtitle("GOplot", subtitle = plot_title))
-
->>>>>>> main
 
   # Nested list holding plots generated and the name.
   plots <- list(list("dot",dot), list("bar", bar), list("cnet", cnet),

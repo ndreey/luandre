@@ -33,9 +33,5 @@ fetch_data_from_file <- function(counts_file, sample_table_file) {
 
 
 
-<<<<<<< HEAD:R/fetch_data_from_file.R
-=======
-#data <- fetch_data_from_file("E-MTAB-2523.counts.txt", "E-MTAB-2523_sample table.txt")
->>>>>>> main:R/fetch_data_local.R
 
 
