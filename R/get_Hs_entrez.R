@@ -9,6 +9,7 @@
 #'
 #' @import clusterProfiler
 #' @import org.Hs.eg.db
+#' @import AnnotationDbi
 #'
 #' @importFrom stats na.omit
 #'
