@@ -9,7 +9,7 @@ Package created for Differential Expression Analysis of bulk RNA-seq data.
 
 
 
-# Installation
+## Installation
 
 LuAndre is not available on CRAN:
 Install the development version of LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
