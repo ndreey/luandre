@@ -21,7 +21,7 @@ LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
 ``` r
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(devtools, AnnotationDbi, GOSemSim, enrichplot, org.Hs.eg.db, clusterProfiler, limma, edgeR)
-devtools::install_github("ndreey/seminar")
+devtools::install_github("ndreey/luandre")
 ```
 
 Manual installment of Bioconductor packages might be needed.
@@ -30,7 +30,7 @@ Manual installment of Bioconductor packages might be needed.
 
 ## Tutorials
 
-- Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/seminar/8387e80c3aa6edee8409b7b75afc0af38ad314c1/docs/index.html) for more information
+- Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/luandre/470d7b98bc5068003c15a983fb3ece0edefcd21f/docs/index.html) for more information
 
 ## Enrichment Analysis
 
