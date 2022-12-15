@@ -20,7 +20,7 @@
 get_Hs_entrez <- function(df, key = "SYMBOL") {
 
   # Creates a new column with the ENTREZID's in deg_genes
-  df$ENTREZID <- org.Hs.eg.db::mapIds(org.Hs.eg.db,
+  df$ENTREZID <- mapIds(org.Hs.eg.db,
                                       keys       = rownames(df),
                                       column     = "ENTREZID",
                                       keytype    = key,
