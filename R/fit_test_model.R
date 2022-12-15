@@ -5,8 +5,7 @@
 #' linear model to test for differentially expressed genes using functions from
 #' the edgeR and limma package
 #'
-#' @param dge_list DGEList object
-#' @param design_matrix numeric design matrix
+#' @param digital_deg_list list containing a design matrix and a DGElist object.
 #'
 #' @import edgeR
 #' @import limma
@@ -16,7 +15,10 @@
 #' @export
 #'
 
-fit_test_model <- function(dge_list, design_matrix) {
+fit_test_model <- function(digital_deg_list) {
+
+  design_matrix <- digital_deg_list[[1]]
+  dge_list <- digital_deg_list[[2]]
 
   # Estimate Common, Trended and Tagwise dispersions and adds to dge_list
   dge_list <- estimateDisp(dge_list, design_matrix)

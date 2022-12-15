@@ -25,7 +25,7 @@ enrich_analysis <- function(counts_file, sample_table_file, db, ontology = NULL,
   dge <- digital_gene_expression(data)
 
   # Linear regression using generalized linear model
-  deg <- fit_test_model(dge[[2]], dge[[1]])
+  deg <- fit_test_model(data)
 
   # Returns a data frame with DEGS meeting the inputed log fold change and
   # adjusted p-values (FDR) conditions.

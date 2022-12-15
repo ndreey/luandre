@@ -4,12 +4,10 @@
 \alias{fit_test_model}
 \title{Linear regression using generalized linear model}
 \usage{
-fit_test_model(dge_list, design_matrix)
+fit_test_model(digital_deg_list)
 }
 \arguments{
-\item{dge_list}{DGEList object}
-
-\item{design_matrix}{numeric design matrix}
+\item{digital_deg_list}{list containing a design matrix and a DGElist object.}
 }
 \value{
 Digital Gene Expression Likelihood Ratio Test data and results
