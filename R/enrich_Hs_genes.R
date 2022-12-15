@@ -18,6 +18,9 @@
 #'
 enrich_Hs_genes <- function(entrez, db, ontology = NULL) {
 
+  # Print statement
+  print("Loading annotations...")
+
   if (db == "GO") {
     # Enrichment GO
     rich_res <- enrichGO(gene          = entrez,
@@ -34,6 +37,9 @@ enrich_Hs_genes <- function(entrez, db, ontology = NULL) {
                            pAdjustMethod = "BH",
                            pvalueCutoff  = 0.05)
   }
+
+  # print stamtent letting user know it is complete
+  print("Annotations loaded")
 
   return(rich_res)
 }
