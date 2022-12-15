@@ -29,7 +29,7 @@ Manual installment of Bioconductor packages might be needed.
 
 ## Tutorials
 
-- Check out the [LuAndre Manual](https://raw.githack.com/ndreey/seminar/main/docs/index.html) for more information
+- Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/seminar/8387e80c3aa6edee8409b7b75afc0af38ad314c1/docs/index.html) for more information
 
 ## Enrichment Analysis
 
