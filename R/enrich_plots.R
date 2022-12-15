@@ -22,7 +22,7 @@
 #'
 #' @importFrom graphics barplot
 #'
-#' @return null
+#' @return multiple plots.png
 #' @export
 #'
 enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
@@ -92,7 +92,8 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
 
     # Adds the tree plot to list
     plots <- list(list("dot",dot), list("bar", bar), list("cnet", cnet),
-                  list("upset", upset), list("tree", tree),  list("goplot", goplot))
+                  list("upset", upset), list("tree", tree),
+                  list("goplot", goplot))
 
   } else {
     # Do not plot tree and goplot for KEGG.

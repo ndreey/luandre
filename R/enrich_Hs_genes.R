@@ -1,4 +1,4 @@
-#' Enrich genes with KEGG or GO (Homo sapiens)
+#' Enrich genes with KEGG or GO pathways (Homo sapiens only)
 #'
 #' Returns a enrichResult class using a vector of ENTREZID's and specifying
 #' which database to enrich from (KEGG or GO) using enrichGO or enrichKEGG
@@ -6,14 +6,14 @@
 #' Biological Processes ("BP"), Cellular Components ("CC") or Molecular
 #' Functions ("MF").
 #'
-#' @param entrez vector with ENTREZID to enrich
+#' @param entrez vector with ENTREZID's to enrich
 #' @param db "KEGG" or "GO"
 #' @param ontology "BP", "CC" or "MF"
 #'
 #' @import clusterProfiler
 #' @import org.Hs.eg.db
 #'
-#' @return enrichResult class
+#' @return enrichResult class object
 #' @export
 #'
 enrich_Hs_genes <- function(entrez, db, ontology = NULL) {

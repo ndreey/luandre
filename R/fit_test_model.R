@@ -25,7 +25,7 @@ fit_test_model <- function(dge_list, design_matrix) {
   fit <- glmQLFit(dge_list, design_matrix)
 
   # Contrast matrix
-  contrast_matrix <- limma::makeContrasts(CaseVsControl = cases - control,
+  contrast_matrix <- makeContrasts(CaseVsControl = cases - control,
                                 levels = design_matrix)
 
   # Statistical testing
@@ -34,9 +34,6 @@ fit_test_model <- function(dge_list, design_matrix) {
   # Change name "-1*samp_groupnormal 1*samp_groupcase" to "Control vs Case"
   deg_results$comparison <- "Control vs Case"
 
-  # summary without lfc or pvalue limit
-  # Prints out Up and Down
-  summary(decideTests(deg_results))
 
   return(deg_results)
 }

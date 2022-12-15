@@ -2,19 +2,19 @@
 % Please edit documentation in R/enrich_Hs_genes.R
 \name{enrich_Hs_genes}
 \alias{enrich_Hs_genes}
-\title{Enrich genes with KEGG or GO (Homo sapiens)}
+\title{Enrich genes with KEGG or GO pathways (Homo sapiens only)}
 \usage{
 enrich_Hs_genes(entrez, db, ontology = NULL)
 }
 \arguments{
-\item{entrez}{vector with ENTREZID to enrich}
+\item{entrez}{vector with ENTREZID's to enrich}
 
 \item{db}{"KEGG" or "GO"}
 
 \item{ontology}{"BP", "CC" or "MF"}
 }
 \value{
-enrichResult class
+enrichResult class object
 }
 \description{
 Returns a enrichResult class using a vector of ENTREZID's and specifying
