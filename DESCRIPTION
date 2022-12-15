@@ -1,11 +1,15 @@
 Package: luandre
 Type: Package
-Title: Differential gene expression analysis using edgeR
+Title: Enrichment analysis of differential gene expression data
 Version: 0.1.0
 Author: André Bourbonnais, Luan Gardenalli
 Maintainer: André Bourbonnais <andbou95@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Package with enrichment analysis tools for bulk RNA-seq data. 
+    With quality processed RNA-seq data, one can use LuAndre to filter 
+    biological unrelevant gene counts and conduct an differential analysis by 
+    fitting a general linear model. Either with a wrapper or step-wise workflow.
+    In the end, a summarised excel file and multiple enrichment plots will be
+    stored in your working directory.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
