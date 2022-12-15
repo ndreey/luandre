@@ -19,7 +19,8 @@ LuAndre is not available on CRAN: Install the development version of
 LuAndre from [GitHub](https://github.com/ndreey/seminar) use:
 
 ``` r
-# install.packages("devtools")
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(devtools, AnnotationDbi, GOSemSim, enrichplot, org.Hs.eg.db, clusterProfiler, limma, edgeR)
 devtools::install_github("ndreey/seminar")
 ```
 
@@ -97,8 +98,9 @@ enrich_plots(enrich_results, n = 10, font_size = 10, file_id = "E-MTAB-2523",
 
 ## System requirements:
 
-LuAndre has been successfully installed on windows 11 using the devtools
-package to install from GitHub.
+LuAndre has been successfully installed on windows 11 using pacman and  the devtools
+package. Been issues where the required dependencies are not installing and thus the use of pacman.
+Please see the installation above.
 
 Dependencies:
 
