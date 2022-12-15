@@ -9,7 +9,6 @@
 #'
 #' @import clusterProfiler
 #' @import org.Hs.eg.db
-#' @import AnnotationDbi
 #'
 #' @importFrom stats na.omit
 #'
@@ -20,7 +19,7 @@
 get_Hs_entrez <- function(df, key = "SYMBOL") {
 
   # Creates a new column with the ENTREZID's in deg_genes
-  df$ENTREZID <- mapIds(org.Hs.eg.db,
+  df$ENTREZID <- clusterProfiler::mapIds(org.Hs.eg.db,
                         keys       = rownames(df),
                         column     = "ENTREZID",
                         keytype    = key,
