@@ -25,7 +25,7 @@ fit_test_model <- function(dge_list, design_matrix) {
   fit <- glmQLFit(dge_list, design_matrix)
 
   # Contrast matrix
-  contrast_matrix <- limma::makeContrasts(CaseVsControl = cases - control,
+  contrast_matrix <- makeContrasts(CaseVsControl = cases - control,
                                 levels = design_matrix)
 
   # Statistical testing
