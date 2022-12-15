@@ -34,7 +34,7 @@ devtools::install_github("ndreey/luandre")
 This wrapper orchestrates the necessary functions calls in order
 
 ``` r
-# Run Harmony to integrate the reference cells
+# Run enrich_analysis() to perform standard analysis
 enrich_analysis("E-MTAB-2523.counts.txt",   # counts table
                 "E-MTAB-2523.sample.txt",   # sample table
                 db = "GO",                  # "KEGG" or "GO"
