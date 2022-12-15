@@ -2,7 +2,7 @@
 title: "BI503G R-Package Build Seminar"
 author: "André Bourbonnais, Luan Gardenalli"
 date: "2022-12-15"
-output: github_document
+output: html_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
