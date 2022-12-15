@@ -16,7 +16,7 @@ data.
 # Installation
 
 LuAndre is not available on CRAN: Install the development version of
-LuAndre from [GitHub](https://github.com/ndreey/seminar) use:
+LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
 
 ``` r
 if (!require("pacman")) install.packages("pacman")
