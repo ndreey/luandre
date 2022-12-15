@@ -20,8 +20,8 @@ enrich_analysis <- function(counts_file, sample_table_file, db, ontology = NULL,
   hs_entrez <- get_Hs_entrez(filtered_degs)
   rich_res <- enrich_Hs_genes(hs_entrez$ENTREZID, db, ontology)
   enrich_plots(rich_res, 10, font_size = 10, file_id = "EA",width = 8, height = 6, dpi = 300)
+  save_deg_excel(filtered_degs, "DEGs")
 }
-
 
 
 
