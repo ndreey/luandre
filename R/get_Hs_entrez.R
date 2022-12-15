@@ -10,7 +10,7 @@
 #' @import clusterProfiler
 #'
 #' @importFrom stats na.omit
-#' @importFrom org.Hs.eg.db mapIds
+#' @importFrom AnnotationDbi mapIds
 #'
 #'
 #' @return dataframe with appended ENTREZID column
