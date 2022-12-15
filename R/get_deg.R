@@ -1,7 +1,8 @@
-#' Aquires the differently expressed genes (DEGs).
+#' Filters out differently expressed genes (DEGs).
 #'
 #' Returns a data frame with DEGS meeting the inputed log fold change and
 #' adjusted p-values (FDR) conditions.
+#'
 #' @param deg_results DGELRT object
 #' @param lfc numeric value indicating min log fold change. Default = 1
 #' @param adj_p numeric value indicating max adjusted p value. Default 0.05
@@ -9,7 +10,7 @@
 #' @import edgeR
 #' @import limma
 #'
-#' @return data.frame
+#' @return data.frame with the DEGs
 #' @export
 #'
 #'

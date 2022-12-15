@@ -1,10 +1,10 @@
 #' Adds ENTREZID column to data frame
 #'
 #' Will map a column with ENTREZID for each gene based on the rownames keytype
-#' (ENTREZID, SYMBOL, ENSEMBL) of data frame.
+#' (SYMBOL, ENSEMBL) of data frame. ketype is defaulted to SYMBOL.
 #'
 #'
-#' @param df data frame
+#' @param df data frame with SYMBOL or ENSEMBL rownames.
 #' @param key keytype, default = "SYMBOL"
 #'
 #' @import clusterProfiler
@@ -12,7 +12,7 @@
 #'
 #' @importFrom stats na.omit
 #'
-#' @return dataframe$ENTREZID
+#' @return dataframe with appended ENTREZID column
 #' @export
 #'
 
@@ -25,9 +25,8 @@ get_Hs_entrez <- function(df, key = "SYMBOL") {
                         keytype    = key,
                         multiVals  = "first")
 
-  # There could be N/A values.. not decided if we should omit or not
-  # Must discuss with Luan how to approach.
-  # For now i will omit the n/a values.
+  # There could be N/A values.. not decided if we should omit or not. Must
+  # discuss with Luan how to approach. For now i will omit the n/a values.
   df <- na.omit(df)
 
   return(df)
