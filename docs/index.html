@@ -62,26 +62,32 @@
   <div class="contents col-md-9">
 
 <div class="section level1">
-<div class="page-header"><h1 id="luandre">LuAndre<a class="anchor" aria-label="anchor" href="#luandre"></a>
+<div class="page-header"><h1 id="bi503g-r-package-build-seminar">BI503G R-Package Build Seminar<a class="anchor" aria-label="anchor" href="#bi503g-r-package-build-seminar"></a>
 </h1></div>
+<p>André Bourbonnais, Luan Gardenalli 2022-12-15</p>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+</div>
+<div class="section level1">
+<h1 id="luandre">LuAndre<a class="anchor" aria-label="anchor" href="#luandre"></a>
+</h1>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Package created for Differential Expression Analysis of bulk RNA-seq data.</p>
-<div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h2>
+</div>
+<div class="section level1">
+<h1 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h1>
 <p>LuAndre is not available on CRAN: Install the development version of LuAndre from <a href="https://github.com/ndreey/luandre" class="external-link">GitHub</a> use:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"ndreey/luandre"</span><span class="op">)</span></span></code></pre></div>
 <p>Manual installment of Bioconductor packages might be needed.</p>
-<pre><code>if(BiocManager::texttocome)</code></pre>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(BiocManager<span class="sc">::</span>texttocome)</span></code></pre></div>
 <div class="section level2">
 <h2 id="tutorials">Tutorials<a class="anchor" aria-label="anchor" href="#tutorials"></a>
 </h2>
 <ul>
-<li>Check out the <a href="link">LuAndre Manual</a> for more information</li>
+<li>Check out the <a href="https://raw.githack.com/ndreey/seminar/main/docs/index.html">LuAndre Manual</a> for more information</li>
 </ul>
 </div>
 <div class="section level2">
@@ -91,64 +97,60 @@
 <h3 id="option-1-use-the-wrapper">Option 1: Use the wrapper<a class="anchor" aria-label="anchor" href="#option-1-use-the-wrapper"></a>
 </h3>
 <p>This wrapper orchestrates the necessary functions calls in order</p>
-<p><code>{r eval=FALSE} # Run Harmony to integrate the reference cells enrich_analysis("E-MTAB-2523.counts.txt",   # counts table                 "E-MTAB-2523.sample.txt",   # sample table                 db = "GO",                  # "KEGG" or "GO"                 ontology = "BP",            # Biological Process                 threshold = 2)              # Filtering threshold</code> Note that <code>ontology =</code> is only required if <code>db = "GO"</code>is set.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Run Harmony to integrate the reference cells</span></span>
+<span><span class="fu"><a href="reference/enrich_analysis.html">enrich_analysis</a></span><span class="op">(</span><span class="st">"E-MTAB-2523.counts.txt"</span>,   <span class="co"># counts table</span></span>
+<span>                <span class="st">"E-MTAB-2523.sample.txt"</span>,   <span class="co"># sample table</span></span>
+<span>                db <span class="op">=</span> <span class="st">"GO"</span>,                  <span class="co"># "KEGG" or "GO"</span></span>
+<span>                ontology <span class="op">=</span> <span class="st">"BP"</span>,            <span class="co"># Biological Process</span></span>
+<span>                threshold <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>              <span class="co"># Filtering threshold</span></span></code></pre></div>
+<p>Note that <code>ontology =</code> is only required if <code>"GO"</code>is set.</p>
 </div>
 <div class="section level3">
 <h3 id="option-2-step-wise-analysis">Option 2: Step-wise analysis<a class="anchor" aria-label="anchor" href="#option-2-step-wise-analysis"></a>
 </h3>
 <p>The plots and excel file will be stored in your working directory.</p>
-<p>```{r eval=FALSE} # Import data fetched_data &lt;- fetch_data_from_file(“E-MTAB-2523.counts.txt”, “E-MTAB-2523.sample.txt”) # Lets check the dims dim(fetched_data[[1]]) # 19351 genes, 18 samples dim(fetched_data[[2]]) # 18 samples, 3 sample info columns.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Import data</span></span>
+<span><span class="va">fetched_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/fetch_data_from_file.html">fetch_data_from_file</a></span><span class="op">(</span><span class="st">"E-MTAB-2523.counts.txt"</span>,</span>
+<span>                                   <span class="st">"E-MTAB-2523.sample.txt"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Lets check the dims</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">fetched_data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>       <span class="co"># 19351 genes, 18 samples</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">fetched_data</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>       <span class="co"># 18 samples, 3 sample info columns.</span></span>
+<span></span>
+<span><span class="co"># Lets filter the data to remove low expression counts</span></span>
+<span><span class="va">filtered_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/filter.html">filter</a></span><span class="op">(</span><span class="va">fetched_data</span>, threshold <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Lets check how many gene are kept</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">filtered_data</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>       <span class="co"># 10730 genes</span></span>
+<span></span>
+<span><span class="co"># Lets create a Digital gene expression list and a design matrix using data3</span></span>
+<span><span class="va">digital_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/digital_gene_expression.html">digital_gene_expression</a></span><span class="op">(</span><span class="va">filtered_data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Lets fit it to a general linear model</span></span>
+<span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/fit_test_model.html">fit_test_model</a></span><span class="op">(</span><span class="va">digital_list</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Lets filter out degs that dont meet our requirments.</span></span>
+<span><span class="va">deg_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_deg.html">get_deg</a></span><span class="op">(</span><span class="va">results</span>, lfc <span class="op">=</span> <span class="fl">2</span>, adj_p <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/dim.html" class="external-link">dim</a></span><span class="op">(</span><span class="va">deg_df</span><span class="op">)</span>      <span class="co"># 180 DEGs!</span></span>
+<span></span>
+<span><span class="co"># Lets store them to an excel file.</span></span>
+<span><span class="fu"><a href="reference/save_deg_excel.html">save_deg_excel</a></span><span class="op">(</span><span class="va">deg_df3</span>, <span class="st">"E-MTAB-2523"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Prepare for plotting</span></span>
+<span><span class="co"># Adds ENTREZID column to data frame</span></span>
+<span><span class="va">deg_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get_Hs_entrez.html">get_Hs_entrez</a></span><span class="op">(</span><span class="va">deg_df</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Enrich genes with KEGG or GO (Homo sapiens)</span></span>
+<span><span class="va">enrich_results</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/enrich_Hs_genes.html">enrich_Hs_genes</a></span><span class="op">(</span><span class="va">deg_df</span><span class="op">$</span><span class="va">ENTREZID</span>, db <span class="op">=</span> <span class="st">"GO"</span>, ontology <span class="op">=</span> <span class="st">"BP"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plots for over-representaiton data.</span></span>
+<span><span class="fu"><a href="reference/enrich_plots.html">enrich_plots</a></span><span class="op">(</span><span class="va">enrich_results</span>, n <span class="op">=</span> <span class="fl">10</span>, font_size <span class="op">=</span> <span class="fl">10</span>, file_id <span class="op">=</span> <span class="st">"E-MTAB-2523"</span>, </span>
+<span>             width <span class="op">=</span> <span class="fl">8</span>, height <span class="op">=</span> <span class="fl">6</span>, dpi <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
-</div>
-<div class="section level1">
-<h1 id="lets-filter-the-data-to-remove-low-expression-counts">Lets filter the data to remove low expression counts<a class="anchor" aria-label="anchor" href="#lets-filter-the-data-to-remove-low-expression-counts"></a>
-</h1>
-<p>filtered_data &lt;- filter(fetched_data, threshold = 3)</p>
-</div>
-<div class="section level1">
-<h1 id="lets-check-how-many-gene-are-kept">Lets check how many gene are kept<a class="anchor" aria-label="anchor" href="#lets-check-how-many-gene-are-kept"></a>
-</h1>
-<p>dim(filtered_data[[1]]) # 10730 genes</p>
-</div>
-<div class="section level1">
-<h1 id="lets-create-a-digital-gene-expression-list-and-a-design-matrix-using-data3">Lets create a Digital gene expression list and a design matrix using data3<a class="anchor" aria-label="anchor" href="#lets-create-a-digital-gene-expression-list-and-a-design-matrix-using-data3"></a>
-</h1>
-<p>digital_list &lt;- digital_gene_expression(filtered_data)</p>
-</div>
-<div class="section level1">
-<h1 id="lets-fit-it-to-a-general-linear-model">Lets fit it to a general linear model<a class="anchor" aria-label="anchor" href="#lets-fit-it-to-a-general-linear-model"></a>
-</h1>
-<p>results &lt;- fit_test_model(digital_list)</p>
-</div>
-<div class="section level1">
-<h1 id="lets-filter-out-degs-that-dont-meet-our-requirments">Lets filter out degs that dont meet our requirments.<a class="anchor" aria-label="anchor" href="#lets-filter-out-degs-that-dont-meet-our-requirments"></a>
-</h1>
-<p>deg_df &lt;- get_deg(results, lfc = 2, adj_p = 0.01) dim(deg_df) # 180 DEGs!</p>
-</div>
-<div class="section level1">
-<h1 id="lets-store-them-to-an-excel-file">Lets store them to an excel file.<a class="anchor" aria-label="anchor" href="#lets-store-them-to-an-excel-file"></a>
-</h1>
-<p>save_deg_excel(deg_df3, “E-MTAB-2523”)</p>
-</div>
-<div class="section level1">
-<h1 id="prepare-for-plotting">Prepare for plotting<a class="anchor" aria-label="anchor" href="#prepare-for-plotting"></a>
-</h1>
-</div>
-<div class="section level1">
-<h1 id="adds-entrezid-column-to-data-frame">Adds ENTREZID column to data frame<a class="anchor" aria-label="anchor" href="#adds-entrezid-column-to-data-frame"></a>
-</h1>
-<p>deg_df &lt;- get_Hs_entrez(deg_df)</p>
-</div>
-<div class="section level1">
-<h1 id="enrich-genes-with-kegg-or-go-homo-sapiens">Enrich genes with KEGG or GO (Homo sapiens)<a class="anchor" aria-label="anchor" href="#enrich-genes-with-kegg-or-go-homo-sapiens"></a>
-</h1>
-<p>enrich_results &lt;- enrich_Hs_genes(deg_df$ENTREZID, db = “GO”, ontology = “BP”)</p>
-</div>
-<div class="section level1">
-<h1 id="plots-for-over-representaiton-data">Plots for over-representaiton data.<a class="anchor" aria-label="anchor" href="#plots-for-over-representaiton-data"></a>
-</h1>
-<p>enrich_plots(enrich_results, n = 10, font_size = 10, file_id = “E-MTAB-2523”, width = 8, height = 6, dpi = 300) ```</p>
 </div>
 <div class="section level1">
 <h1 id="installation-notes">Installation notes<a class="anchor" aria-label="anchor" href="#installation-notes"></a>

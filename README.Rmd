@@ -2,7 +2,7 @@
 title: "BI503G R-Package Build Seminar"
 author: "André Bourbonnais, Luan Gardenalli"
 date: "2022-12-15"
-output: github_document
+output: html_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,7 +19,7 @@ Package created for Differential Expression Analysis of bulk RNA-seq data.
 # Installation
 
 LuAndre is not available on CRAN:
-Install the development version of LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
+Install the development version of LuAndre from [GitHub](https://raw.githack.com/ndreey/seminar/main/docs/index.html) use:
 
 ``` r
 # install.packages("devtools")
