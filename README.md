@@ -112,9 +112,5 @@ Dependencies:
 
 ## Troubleshooting:
 
-- You may need to install the latest version of devtools (because of the
-  recent GitHub change from “master” to “main” terminology, which can
-  cause `install_github` to fail).
-
 - Been issues where the required dependencies are not installing. 
   Please see the recommended code line for the installation above.
