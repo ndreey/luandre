@@ -94,8 +94,7 @@ enrich_plots(enrich_results, n = 10, font_size = 10, file_id = "E-MTAB-2523",
 ## System requirements:
 
 LuAndre has been successfully installed on windows 11 using pacman and  the devtools
-package. Been issues where the required dependencies are not installing and thus the use of pacman.
-Please see the installation above.
+package. 
 
 Dependencies:
 
@@ -116,3 +115,6 @@ Dependencies:
 - You may need to install the latest version of devtools (because of the
   recent GitHub change from “master” to “main” terminology, which can
   cause `install_github` to fail).
+
+- Been issues where the required dependencies are not installing. 
+  Please see the recommended code line for the installation above.
