@@ -22,5 +22,6 @@ Imports:
     enrichplot,
     GOSemSim,
     ggupset,
-    openxlsx
+    openxlsx,
+    AnnotationDbi
     
