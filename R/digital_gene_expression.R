@@ -4,6 +4,8 @@
 #'
 #' @param data list consisting of the count data and sample table.
 #'
+#' @importFrom stats model.matrix
+#'
 #' @return list containing a design matrix and a DGElist object.
 #' @export
 

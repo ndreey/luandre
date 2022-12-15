@@ -6,6 +6,8 @@
 #' @param counts_file file containing count data.
 #' @param sample_table_file file containing sample table.
 #'
+#' @importFrom utils read.table
+#'
 #' @return list with a count data-frame and a sample table data-frame.
 #' @export
 
