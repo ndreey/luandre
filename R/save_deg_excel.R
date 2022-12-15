@@ -62,4 +62,7 @@ save_deg_excel <- function(deg_df, filename) {
   # Save the updated Excel file
   saveWorkbook(wb, file, overwrite = TRUE)
 
+  # Print statment
+  print("Excel file created")
+
 }
