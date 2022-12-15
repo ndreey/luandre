@@ -23,11 +23,6 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(devtools, AnnotationDbi, GOSemSim, enrichplot, org.Hs.eg.db, clusterProfiler, limma, edgeR)
 devtools::install_github("ndreey/luandre")
 ```
-
-Manual installment of Bioconductor packages might be needed.
-
-    if(BiocManager::texttocome)
-
 ## Tutorials
 
 - Check out the [LuAndre Manual](https://rawcdn.githack.com/ndreey/luandre/470d7b98bc5068003c15a983fb3ece0edefcd21f/docs/index.html) for more information
