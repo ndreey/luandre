@@ -18,7 +18,7 @@ Package created for Differential Expression Analysis of bulk RNA-seq data.
 
 # Installation
 
-Symphony is not available on CRAN:
+LuAndre is not available on CRAN:
 Install the development version of LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
 
 ``` r
@@ -41,7 +41,7 @@ if(BiocManager::texttocome)
 
 ### Option 1: Use the wrapper
 
-This function compresses an existing Harmony object into a Symphony reference that enables query mapping. We recommend this option for most users since it allows your code to be more modular and flexible.
+This wrapper orchestrates the necessary functions calls in order 
 
 ```{r eval=FALSE}
 # Run Harmony to integrate the reference cells
