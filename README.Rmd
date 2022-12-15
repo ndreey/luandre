@@ -19,20 +19,22 @@ Package created for Differential Expression Analysis of bulk RNA-seq data.
 # Installation
 
 Symphony is not available on CRAN:
-Install the development version of Symphony from [GitHub](https://github.com/) use:
+Install the development version of LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("ndreey/luandre")
 ```
-Install of bio conductor packages might be needed.
+Manual installment of Bioconductor packages might be needed.
 
-# Usage/Demos
+```
+if(BiocManager::texttocome)
+```
+
+
 ## Tutorials
 
-* Check out the [quick start (<5 min) PBMCs tutorial](https://github.com/immunogenomics/symphony/blob/main/vignettes/pbmcs_tutorial.ipynb/) for an example of how to build a custom reference and map to it.
-
-* Check out the [pre-built references tutorial](https://github.com/immunogenomics/symphony/blob/main/vignettes/prebuilt_references_tutorial.ipynb) for examples of how to map to provided Symphony references pre-built from the datasets featured in the manuscript.
+* Check out the [LuAndre Manual](link) for more information
 
 
 ## Enrichment Analysis
