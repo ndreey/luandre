@@ -44,7 +44,7 @@ enrich_analysis("E-MTAB-2523.counts.txt",   # counts table
                 ontology = "BP",            # Biological Process
                 threshold = 2)              # Filtering threshold
 ```
-Note that `ontology = ` is only required if `"GO"`is set.
+Note that `ontology = `  is only required if `"GO"`is set.
 
 ### Option 2: Step-wise analysis
 The plots and excel file will be stored in your working directory.
