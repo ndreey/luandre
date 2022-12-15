@@ -30,5 +30,7 @@ get_Hs_entrez <- function(df, key = "SYMBOL") {
   # discuss with Luan how to approach. For now i will omit the n/a values.
   df <- na.omit(df)
 
+  # Print statment to let user know
+  print("ENTREZID was added to data.frame")
   return(df)
 }
