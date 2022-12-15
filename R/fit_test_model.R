@@ -16,10 +16,7 @@
 #' @export
 #'
 
-fit_test_model <- function(dge) {
-
-  design_matrix <- dge[[1]]
-  dge_list <- dge[[2]]
+fit_test_model <- function(dge_list, design_matrix) {
 
   # Estimate Common, Trended and Tagwise dispersions and adds to dge_list
   dge_list <- edgeR::estimateDisp(dge_list, design_matrix)
@@ -28,7 +25,7 @@ fit_test_model <- function(dge) {
   fit <- edgeR::glmQLFit(dge_list, design_matrix)
 
   # Contrast matrix
-  contrast_matrix <- limma::makeContrasts(CaseVsControl = case - control,
+  contrast_matrix <- limma::makeContrasts(CaseVsControl = cases - control,
                                 levels = design_matrix)
 
   # Statistical testing

@@ -9,6 +9,7 @@
 
 digital_gene_expression <- function(data) {
 
+  count_data <- data[[1]]
   sample_table <- data[[2]]
 
   #factorize control/disease. Requires column with the name "disease"
