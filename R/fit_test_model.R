@@ -16,10 +16,7 @@
 #' @export
 #'
 
-fit_test_model <- function(dge) {
-
-  design_matrix <- dge[[1]]
-  dge_list <- dge[[2]]
+fit_test_model <- function(dge_list, design_matrix) {
 
   # Estimate Common, Trended and Tagwise dispersions and adds to dge_list
   dge_list <- estimateDisp(dge_list, design_matrix)
@@ -28,7 +25,11 @@ fit_test_model <- function(dge) {
   fit <- glmQLFit(dge_list, design_matrix)
 
   # Contrast matrix
+<<<<<<< HEAD
+  contrast_matrix <- limma::makeContrasts(CaseVsControl = cases - control,
+=======
   contrast_matrix <- makeContrasts(CaseVsControl = case - control,
+>>>>>>> main
                                 levels = design_matrix)
 
   # Statistical testing

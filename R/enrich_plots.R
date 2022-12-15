@@ -27,7 +27,11 @@
 #'
 enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
 
+<<<<<<< HEAD
+  # Store the ontology of enrichRes object
+=======
     # Store the ontology of enrichRes object
+>>>>>>> main
   type <- toupper(rich_res@ontology)
 
   # Define a string with placeholders for multiple values
@@ -55,11 +59,15 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
   # Draw plots------------------------------------------------------------------
   # Dotplot
   dot <- dotplot(rich_res, showCategory = n, title = plot_title,
+<<<<<<< HEAD
+                 font.size = font_size)
+=======
                              font.size = font_size)
+>>>>>>> main
 
   # Barplot
   bar <- barplot(rich_res, showCategory = n, title = plot_title,
-                             font.size = font_size)
+                 font.size = font_size)
 
   # Network plot
   cnet <- cnetplot(rich_res, colorEdge = TRUE) +
@@ -69,10 +77,13 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
   upset <- upsetplot(rich_res) +
     ggtitle(ggtitle("Upset plot", subtitle = plot_title))
 
+<<<<<<< HEAD
+=======
   # Like CNET but we get arrows!
   goplot <- goplot(rich_res) +
     ggtitle(ggtitle("GOplot", subtitle = plot_title))
 
+>>>>>>> main
 
   # Nested list holding plots generated and the name.
   plots <- list(list("dot",dot), list("bar", bar), list("cnet", cnet),
@@ -90,11 +101,18 @@ enrich_plots <- function(rich_res, n, font_size = NULL, file_id, ... ) {
     tree <- treeplot(sim_mat, showCategory = n) +
       ggtitle(ggtitle("Treeplot", subtitle = plot_title))
 
+    # Like CNET but we get arrows!
+    goplot <- goplot(rich_res) +
+      ggtitle(ggtitle("GOplot", subtitle = plot_title))
+
     # Adds the tree plot to list
-    plots <- append(plots, list("tree", tree))
+    plots <- list(list("dot",dot), list("bar", bar), list("cnet", cnet),
+                  list("upset", upset), list("tree", tree),  list("goplot", goplot))
 
   } else {
-    # Do not plot tree for KEGG.
+    # Do not plot tree and goplot for KEGG.
+    plots <- list(list("dot",dot), list("bar", bar), list("cnet", cnet),
+                  list("upset", upset))
   }
 
   # Plot to png-----------------------------------------------------------------

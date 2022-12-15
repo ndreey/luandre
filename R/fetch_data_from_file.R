@@ -4,7 +4,7 @@
 #' Expects two files, a count data file and a sample table file.
 #'
 #' @param counts_file file containing count data.
-#' @param sample_table file containing sample table.
+#' @param sample_table_file file containing sample table.
 #'
 #' @return list with a count data-frame and a sample table data-frame.
 #' @export
@@ -33,6 +33,9 @@ fetch_data_from_file <- function(counts_file, sample_table_file) {
 
 
 
+<<<<<<< HEAD:R/fetch_data_from_file.R
+=======
 #data <- fetch_data_from_file("E-MTAB-2523.counts.txt", "E-MTAB-2523_sample table.txt")
+>>>>>>> main:R/fetch_data_local.R
 
 

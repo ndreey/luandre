@@ -15,13 +15,13 @@ enrich_analysis(
 \arguments{
 \item{counts_file}{file containing count data.}
 
+\item{sample_table_file}{file containing sample table.}
+
 \item{db}{"KEGG" or "GO"}
 
 \item{ontology}{"BP", "CC" or "MF"}
 
 \item{threshold}{minimum mean-log2-CPM to keep the data during low expression filtering.}
-
-\item{sample_table}{file containing sample table.}
 }
 \description{
 Calls upon all functions of the package to instantly perform EA and save the result plots to the users working directory.
