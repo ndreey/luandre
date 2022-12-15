@@ -19,24 +19,24 @@
 fit_test_model <- function(dge_list, design_matrix) {
 
   # Estimate Common, Trended and Tagwise dispersions and adds to dge_list
-  dge_list <- edgeR::estimateDisp(dge_list, design_matrix)
+  dge_list <- estimateDisp(dge_list, design_matrix)
 
   # Fit the model
-  fit <- edgeR::glmQLFit(dge_list, design_matrix)
+  fit <- glmQLFit(dge_list, design_matrix)
 
   # Contrast matrix
   contrast_matrix <- limma::makeContrasts(CaseVsControl = cases - control,
                                 levels = design_matrix)
 
   # Statistical testing
-  deg_results <- edgeR::glmQLFTest(fit, contrast = contrast_matrix)
+  deg_results <- glmQLFTest(fit, contrast = contrast_matrix)
 
   # Change name "-1*samp_groupnormal 1*samp_groupcase" to "Control vs Case"
   deg_results$comparison <- "Control vs Case"
 
   # summary without lfc or pvalue limit
   # Prints out Up and Down
-  summary(limma::decideTests(deg_results))
+  summary(decideTests(deg_results))
 
   return(deg_results)
 }

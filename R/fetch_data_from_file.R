@@ -35,4 +35,3 @@ fetch_data_from_file <- function(counts_file, sample_table_file) {
 
 
 
-

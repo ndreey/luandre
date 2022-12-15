@@ -31,44 +31,35 @@ save_deg_excel <- function(deg_df, filename) {
 
   # We can style much more but this is a good start!
   # Creates a stylish heading in the excel sheet
-  hs <- openxlsx::createStyle(textDecoration = "BOLD",
-                              fontColour = "#FFFFFF",
-                              fontSize = 12,
-                              fontName = "Arial Narrow",
-                              fgFill = "#4F80BD",
-                              halign = "center",
-                              valign = "center")
+  hs <- createStyle(textDecoration = "BOLD",
+                    fontColour = "#FFFFFF",
+                    fontSize = 12,
+                    fontName = "Arial Narrow",
+                    fgFill = "#4F80BD",
+                    halign = "center",
+                    valign = "center")
 
   # Create a custom style with bold formatting to add on the SYMBOL column
-  bold_style <- openxlsx::createStyle(textDecoration = "BOLD",
-                                      fontSize = 10,
-                                      fontName = "Arial Narrow",
-                                      halign = "center",
-                                      valign = "center",
-                                      border = "TopBottomLetRight",
-                                      borderStyle = "thin")
+  bold_style <- createStyle(textDecoration = "BOLD",
+                            fontSize = 10,
+                            fontName = "Arial Narrow",
+                            halign = "center",
+                            valign = "center",
+                            border = "TopBottomLetRight",
+                            borderStyle = "thin")
 
   # Writes data to excel file
-  openxlsx::write.xlsx(deg_df,
-                       file,
-                       sheetName = "luandre",
-                       colNames = TRUE,
-                       rowNames = FALSE,
-                       tabColour = "grey",
-                       borders = c("surrounding", "columns", "rows"),
-                       headerStyle = hs)
+  write.xlsx(deg_df, file, sheetName = "luandre", colNames = TRUE,
+             rowNames = FALSE, tabColour = "grey", headerStyle = hs,
+             borders = c("surrounding", "columns", "rows"))
 
   # Open the saved Excel file
-  wb <- openxlsx::loadWorkbook(file)
+  wb <- loadWorkbook(file)
 
   # Apply the bold_style to the cells in SYMBOL column of the first worksheet
-  openxlsx::addStyle(wb,
-                     sheet = 1,
-                     cols = 1,
-                     rows = 2:nrow(deg_df),
-                     style = bold_style)
+  addStyle(wb, sheet = 1, cols = 1, rows = 2:nrow(deg_df), style = bold_style)
 
   # Save the updated Excel file
-  openxlsx::saveWorkbook(wb, file, overwrite = TRUE)
+  saveWorkbook(wb, file, overwrite = TRUE)
 
 }

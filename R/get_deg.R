@@ -16,7 +16,7 @@
 get_deg <- function(deg_results, lfc = 1, adj_p = 0.05) {
 
   # Sort the genes based on p-value
-  deg_table <- edgeR::topTags(deg_results, adjust.method = "BH",
+  deg_table <- topTags(deg_results, adjust.method = "BH",
                               n = nrow(deg_results$table))
 
   # Filter out degs based on user input
