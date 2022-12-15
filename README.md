@@ -16,11 +16,11 @@ data.
 # Installation
 
 LuAndre is not available on CRAN: Install the development version of
-LuAndre from [GitHub](https://github.com/ndreey/luandre) use:
+LuAndre from [GitHub](https://github.com/ndreey/seminar) use:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("ndreey/luandre")
+devtools::install_github("ndreey/seminar")
 ```
 
 Manual installment of Bioconductor packages might be needed.
